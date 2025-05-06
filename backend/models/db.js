@@ -21,11 +21,12 @@ const createTable = () => {
     id SERIAL NOT NULL,
     name VARCHAR(255),
     email VARCHAR(255) UNIQUE,
-    password VARCHAR(255)
+    password VARCHAR(255),
+    role_id INT
     );`
     )
     .then((result) => {
-      // console.log("result", result);
+      console.log("result", result);
     })
     .catch((err) => {
       console.log(err);
@@ -33,4 +34,4 @@ const createTable = () => {
 };
 module.exports = pool;
 
-createTable();
+// createTable();
