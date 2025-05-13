@@ -23,7 +23,15 @@ const createTable = () => {
     email VARCHAR(255) UNIQUE,
     password VARCHAR(255),
     role_id INT
-    );`
+    );
+    
+    CREATE TABLE category (
+    id SERIAL NOT NULL,
+    name_category VARCHAR(255),
+    image_path TEXT
+    );
+    
+    `
     )
     .then((result) => {
       console.log("result", result);
