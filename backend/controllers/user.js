@@ -26,6 +26,13 @@ const register = async (req, res) => {
       });
     });
 };
+const login = (req, res) => {
+  
+  const { email, password } = req.body;
+  const data = [email.toLowerCase(), password];
+  const query = `SELECT * FROM users WHERE email = $1`;
+};
 module.exports = {
   register,
+  login,
 };
